@@ -36,7 +36,7 @@ public class GUIFilter extends javax.swing.JFrame {
     private void initComponents() {
 
         jFileChooser1 = new javax.swing.JFileChooser();
-        cancelButton = new javax.swing.JButton();
+        resetButton = new javax.swing.JButton();
         okButton = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jSlider12 = new javax.swing.JSlider();
@@ -44,7 +44,7 @@ public class GUIFilter extends javax.swing.JFrame {
         jSlider11 = new javax.swing.JSlider();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jSider22 = new javax.swing.JSlider();
+        jSlider22 = new javax.swing.JSlider();
         jSlider21 = new javax.swing.JSlider();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -69,11 +69,11 @@ public class GUIFilter extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        cancelButton.setText("Reset");
-        cancelButton.setPreferredSize(new java.awt.Dimension(65, 23));
-        cancelButton.addActionListener(new java.awt.event.ActionListener() {
+        resetButton.setText("Reset");
+        resetButton.setPreferredSize(new java.awt.Dimension(65, 23));
+        resetButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cancelButtonActionPerformed(evt);
+                resetButtonActionPerformed(evt);
             }
         });
 
@@ -130,11 +130,11 @@ public class GUIFilter extends javax.swing.JFrame {
 
         jPanel2.setPreferredSize(new java.awt.Dimension(300, 350));
 
-        jSider22.setMaximum(255);
-        jSider22.setValue(255);
-        jSider22.addChangeListener(new javax.swing.event.ChangeListener() {
+        jSlider22.setMaximum(255);
+        jSlider22.setValue(255);
+        jSlider22.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                jSider22StateChanged(evt);
+                jSlider22StateChanged(evt);
             }
         });
 
@@ -156,7 +156,7 @@ public class GUIFilter extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSider22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSlider22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jSlider21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(46, 46, 46))
         );
@@ -167,7 +167,7 @@ public class GUIFilter extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 298, Short.MAX_VALUE)
                 .addComponent(jSlider21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSider22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jSlider22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel3.setPreferredSize(new java.awt.Dimension(300, 350));
@@ -305,7 +305,7 @@ public class GUIFilter extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(okButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(resetButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -327,7 +327,7 @@ public class GUIFilter extends javax.swing.JFrame {
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(resetButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(okButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
@@ -343,9 +343,17 @@ public class GUIFilter extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_okButtonActionPerformed
 
-    private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cancelButtonActionPerformed
+    private void resetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetButtonActionPerformed
+        final int min = jSlider11.getMinimum();
+        final int max = jSlider11.getMaximum();
+
+        jSlider11.setValue(min);
+        jSlider21.setValue(min);
+        jSlider31.setValue(min);
+        jSlider12.setValue(max);
+        jSlider22.setValue(max);
+        jSlider32.setValue(max);
+    }//GEN-LAST:event_resetButtonActionPerformed
 
     private void openMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openMenuItemActionPerformed
         int returnVal = jFileChooser1.showOpenDialog(this);
@@ -402,20 +410,20 @@ public class GUIFilter extends javax.swing.JFrame {
         handler32.handle(jSlider32.getValue());
     }//GEN-LAST:event_jSlider32StateChanged
 
-    private void jSider22StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSider22StateChanged
-        handler22.handle(jSlider32.getValue());
-    }//GEN-LAST:event_jSider22StateChanged
+    private void jSlider22StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider22StateChanged
+        handler22.handle(jSlider22.getValue());
+    }//GEN-LAST:event_jSlider22StateChanged
 
     private void jSlider21StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider21StateChanged
-        handler21.handle(jSlider31.getValue());
+        handler21.handle(jSlider21.getValue());
     }//GEN-LAST:event_jSlider21StateChanged
 
     private void jSlider11StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider11StateChanged
-        handler11.handle(jSlider31.getValue());
+        handler11.handle(jSlider11.getValue());
     }//GEN-LAST:event_jSlider11StateChanged
 
     private void jSlider12StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider12StateChanged
-        handler12.handle(jSlider32.getValue());
+        handler12.handle(jSlider12.getValue());
     }//GEN-LAST:event_jSlider12StateChanged
 
     private static final int SIZE = 300;
@@ -502,7 +510,6 @@ public class GUIFilter extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem aboutMenuItem;
-    private javax.swing.JButton cancelButton;
     private javax.swing.JMenuItem contentsMenuItem;
     private javax.swing.JMenuItem copyMenuItem;
     private javax.swing.JMenuItem cutMenuItem;
@@ -520,16 +527,17 @@ public class GUIFilter extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JSlider jSider22;
     private javax.swing.JSlider jSlider11;
     private javax.swing.JSlider jSlider12;
     private javax.swing.JSlider jSlider21;
+    private javax.swing.JSlider jSlider22;
     private javax.swing.JSlider jSlider31;
     private javax.swing.JSlider jSlider32;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JButton okButton;
     private javax.swing.JMenuItem openMenuItem;
     private javax.swing.JMenuItem pasteMenuItem;
+    private javax.swing.JButton resetButton;
     private javax.swing.JMenuItem saveAsMenuItem;
     private javax.swing.JMenuItem saveMenuItem;
     // End of variables declaration//GEN-END:variables
