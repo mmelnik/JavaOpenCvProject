@@ -47,7 +47,7 @@ public class GUIFilter extends javax.swing.JFrame {
         jSlider2 = new javax.swing.JSlider();
         jSlider5 = new javax.swing.JSlider();
         jPanel3 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jSlider3 = new javax.swing.JSlider();
         jSlider6 = new javax.swing.JSlider();
         menuBar = new javax.swing.JMenuBar();
@@ -137,7 +137,7 @@ public class GUIFilter extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
+                    .addComponent(jLabel1)
                     .addComponent(jSlider3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jSlider6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -145,7 +145,7 @@ public class GUIFilter extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jLabel4)
+                .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 198, Short.MAX_VALUE)
                 .addComponent(jSlider6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -274,15 +274,28 @@ public class GUIFilter extends javax.swing.JFrame {
             File file = jFileChooser1.getSelectedFile();
             
             try {
-                jLabel4.setIcon(new ImageIcon(getScaledImage(ImageIO.read(file), 200, 200)));
-                jLabel3.setIcon(new ImageIcon(getScaledImage(ImageIO.read(file), 200, 200)));
-                jLabel2.setIcon(new ImageIcon(getScaledImage(ImageIO.read(file), 200, 200)));
+                setImage1(ImageIO.read(file));
+                setImage2(ImageIO.read(file));
+                setImage3(ImageIO.read(file));
             } catch (IOException e) {
                 //NOP
             }
         }
     }//GEN-LAST:event_openMenuItemActionPerformed
 
+    private static final int SIZE = 200;
+    public void setImage1(Image image) {
+        jLabel1.setIcon(new ImageIcon(getScaledImage(image, SIZE, SIZE)));
+    }
+
+    public void setImage2(Image image) {
+        jLabel2.setIcon(new ImageIcon(getScaledImage(image, SIZE, SIZE)));
+    }
+
+    public void setImage3(Image image) {
+        jLabel3.setIcon(new ImageIcon(getScaledImage(image, SIZE, SIZE)));
+    }
+    
     /**
      * Resizes an image using a Graphics2D object backed by a BufferedImage.
      *
@@ -318,6 +331,7 @@ public class GUIFilter extends javax.swing.JFrame {
                     break;
                 }
             }
+            
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(GUIFilter.class.getName()).log(
                     java.util.logging.Level.SEVERE, null, ex);
@@ -354,9 +368,9 @@ public class GUIFilter extends javax.swing.JFrame {
     private javax.swing.JMenu fileMenu;
     private javax.swing.JMenu helpMenu;
     private javax.swing.JFileChooser jFileChooser1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
