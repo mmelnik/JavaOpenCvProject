@@ -85,6 +85,18 @@ public class GUIFilter extends javax.swing.JFrame {
 
         jPanel1.setPreferredSize(new java.awt.Dimension(200, 250));
 
+        jSlider12.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSlider12StateChanged(evt);
+            }
+        });
+
+        jSlider11.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSlider11StateChanged(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -108,6 +120,18 @@ public class GUIFilter extends javax.swing.JFrame {
 
         jPanel2.setPreferredSize(new java.awt.Dimension(200, 250));
 
+        jSider22.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSider22StateChanged(evt);
+            }
+        });
+
+        jSlider21.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSlider21StateChanged(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -130,6 +154,12 @@ public class GUIFilter extends javax.swing.JFrame {
         );
 
         jPanel3.setPreferredSize(new java.awt.Dimension(200, 250));
+
+        jSlider32.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSlider32StateChanged(evt);
+            }
+        });
 
         jSlider31.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -320,31 +350,32 @@ public class GUIFilter extends javax.swing.JFrame {
         this.handler32 = handler32;
     }
     
-    private void jSlider11StateChanged(javax.swing.event.ChangeEvent evt) {                                       
-        handler11.handle(jSlider31.getValue());
-    }                                      
-    
-    private void jSlider12StateChanged(javax.swing.event.ChangeEvent evt) {                                       
-        handler12.handle(jSlider32.getValue());
-    }                                      
-    
-    private void jSlider21StateChanged(javax.swing.event.ChangeEvent evt) {                                       
-        handler21.handle(jSlider31.getValue());
-    }                                      
-    
-    private void jSlider22StateChanged(javax.swing.event.ChangeEvent evt) {                                       
-        handler22.handle(jSlider32.getValue());
-    }                                      
-    
     private void jSlider31StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider31StateChanged
         handler31.handle(jSlider31.getValue());
     }//GEN-LAST:event_jSlider31StateChanged
-    
-    private void jSlider32StateChanged(javax.swing.event.ChangeEvent evt) {                                       
-        handler32.handle(jSlider32.getValue());
-    }                                      
 
-    private static final int SIZE = 400;
+    private void jSlider32StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider32StateChanged
+        handler32.handle(jSlider32.getValue());
+    }//GEN-LAST:event_jSlider32StateChanged
+
+    private void jSider22StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSider22StateChanged
+        handler22.handle(jSlider32.getValue());
+    }//GEN-LAST:event_jSider22StateChanged
+
+    private void jSlider21StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider21StateChanged
+        handler21.handle(jSlider31.getValue());
+    }//GEN-LAST:event_jSlider21StateChanged
+
+    private void jSlider11StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider11StateChanged
+        handler11.handle(jSlider31.getValue());
+    }//GEN-LAST:event_jSlider11StateChanged
+
+    private void jSlider12StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider12StateChanged
+        handler12.handle(jSlider32.getValue());
+    }//GEN-LAST:event_jSlider12StateChanged
+
+    private static final int SIZE = 200;
+    
     public void setImage1(Image image) {
         jLabel1.setIcon(new ImageIcon(getScaledImage(image, SIZE, SIZE)));
     }

@@ -215,10 +215,16 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JSlider" name="jSlider12">
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="jSlider12StateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
         </Component>
         <Component class="javax.swing.JSlider" name="jSlider11">
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="jSlider11StateChanged"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -258,8 +264,14 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
         </Component>
         <Component class="javax.swing.JSlider" name="jSider22">
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="jSider22StateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JSlider" name="jSlider21">
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="jSlider21StateChanged"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -299,6 +311,9 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
         </Component>
         <Component class="javax.swing.JSlider" name="jSlider32">
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="jSlider32StateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JSlider" name="jSlider31">
           <Events>
