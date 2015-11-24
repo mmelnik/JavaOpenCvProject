@@ -194,9 +194,9 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jSlider4" min="-2" max="-2" attributes="0"/>
+                      <Component id="jSlider11" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jSlider1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jSlider12" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -206,19 +206,19 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="198" max="32767" attributes="0"/>
-                  <Component id="jSlider4" min="-2" max="-2" attributes="0"/>
+                  <Component id="jSlider11" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jSlider1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jSlider12" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JSlider" name="jSlider1">
+        <Component class="javax.swing.JSlider" name="jSlider12">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
         </Component>
-        <Component class="javax.swing.JSlider" name="jSlider4">
+        <Component class="javax.swing.JSlider" name="jSlider11">
         </Component>
       </SubComponents>
     </Container>
@@ -235,8 +235,8 @@
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      <Component id="jSlider2" min="-2" max="-2" attributes="0"/>
-                      <Component id="jSlider5" min="-2" max="-2" attributes="0"/>
+                      <Component id="jSider22" min="-2" max="-2" attributes="0"/>
+                      <Component id="jSlider21" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
@@ -247,9 +247,9 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="198" max="32767" attributes="0"/>
-                  <Component id="jSlider5" min="-2" max="-2" attributes="0"/>
+                  <Component id="jSlider21" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jSlider2" min="-2" max="-2" attributes="0"/>
+                  <Component id="jSider22" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -257,9 +257,9 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel2">
         </Component>
-        <Component class="javax.swing.JSlider" name="jSlider2">
+        <Component class="javax.swing.JSlider" name="jSider22">
         </Component>
-        <Component class="javax.swing.JSlider" name="jSlider5">
+        <Component class="javax.swing.JSlider" name="jSlider21">
         </Component>
       </SubComponents>
     </Container>
@@ -276,8 +276,8 @@
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <Component id="jSlider3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jSlider6" min="-2" max="-2" attributes="0"/>
+                      <Component id="jSlider32" min="-2" max="-2" attributes="0"/>
+                      <Component id="jSlider31" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
@@ -288,9 +288,9 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="198" max="32767" attributes="0"/>
-                  <Component id="jSlider6" min="-2" max="-2" attributes="0"/>
+                  <Component id="jSlider31" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jSlider3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jSlider32" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -298,9 +298,12 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel1">
         </Component>
-        <Component class="javax.swing.JSlider" name="jSlider3">
+        <Component class="javax.swing.JSlider" name="jSlider32">
         </Component>
-        <Component class="javax.swing.JSlider" name="jSlider6">
+        <Component class="javax.swing.JSlider" name="jSlider31">
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="jSlider31StateChanged"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

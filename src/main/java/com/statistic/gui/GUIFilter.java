@@ -39,17 +39,17 @@ public class GUIFilter extends javax.swing.JFrame {
         cancelButton = new javax.swing.JButton();
         okButton = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jSlider1 = new javax.swing.JSlider();
+        jSlider12 = new javax.swing.JSlider();
         jLabel3 = new javax.swing.JLabel();
-        jSlider4 = new javax.swing.JSlider();
+        jSlider11 = new javax.swing.JSlider();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jSlider2 = new javax.swing.JSlider();
-        jSlider5 = new javax.swing.JSlider();
+        jSider22 = new javax.swing.JSlider();
+        jSlider21 = new javax.swing.JSlider();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jSlider3 = new javax.swing.JSlider();
-        jSlider6 = new javax.swing.JSlider();
+        jSlider32 = new javax.swing.JSlider();
+        jSlider31 = new javax.swing.JSlider();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         openMenuItem = new javax.swing.JMenuItem();
@@ -92,18 +92,18 @@ public class GUIFilter extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSlider4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSlider11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jSlider12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 198, Short.MAX_VALUE)
-                .addComponent(jSlider4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jSlider11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jSlider12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel2.setPreferredSize(new java.awt.Dimension(200, 250));
@@ -115,8 +115,8 @@ public class GUIFilter extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
-                    .addComponent(jSlider2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSlider5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jSider22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSlider21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -124,12 +124,18 @@ public class GUIFilter extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 198, Short.MAX_VALUE)
-                .addComponent(jSlider5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jSlider21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSlider2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jSider22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel3.setPreferredSize(new java.awt.Dimension(200, 250));
+
+        jSlider31.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSlider31StateChanged(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -138,8 +144,8 @@ public class GUIFilter extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
-                    .addComponent(jSlider3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSlider6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jSlider32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSlider31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -147,9 +153,9 @@ public class GUIFilter extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 198, Short.MAX_VALUE)
-                .addComponent(jSlider6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jSlider31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSlider3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jSlider32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         fileMenu.setMnemonic('f');
@@ -283,7 +289,62 @@ public class GUIFilter extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_openMenuItemActionPerformed
 
-    private static final int SIZE = 200;
+    private Handler handler11;
+    private Handler handler12;
+    private Handler handler21;
+    private Handler handler22;
+    private Handler handler31;
+    private Handler handler32;
+
+    public void setHandler11(Handler handler11) {
+        this.handler11 = handler11;
+    }
+
+    public void setHandler12(Handler handler12) {
+        this.handler12 = handler12;
+    }
+
+    public void setHandler21(Handler handler21) {
+        this.handler21 = handler21;
+    }
+
+    public void setHandler22(Handler handler22) {
+        this.handler22 = handler22;
+    }
+
+    public void setHandler31(Handler handler31) {
+        this.handler31 = handler31;
+    }
+
+    public void setHandler32(Handler handler32) {
+        this.handler32 = handler32;
+    }
+    
+    private void jSlider11StateChanged(javax.swing.event.ChangeEvent evt) {                                       
+        handler11.handle(jSlider31.getValue());
+    }                                      
+    
+    private void jSlider12StateChanged(javax.swing.event.ChangeEvent evt) {                                       
+        handler12.handle(jSlider32.getValue());
+    }                                      
+    
+    private void jSlider21StateChanged(javax.swing.event.ChangeEvent evt) {                                       
+        handler21.handle(jSlider31.getValue());
+    }                                      
+    
+    private void jSlider22StateChanged(javax.swing.event.ChangeEvent evt) {                                       
+        handler22.handle(jSlider32.getValue());
+    }                                      
+    
+    private void jSlider31StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider31StateChanged
+        handler31.handle(jSlider31.getValue());
+    }//GEN-LAST:event_jSlider31StateChanged
+    
+    private void jSlider32StateChanged(javax.swing.event.ChangeEvent evt) {                                       
+        handler32.handle(jSlider32.getValue());
+    }                                      
+
+    private static final int SIZE = 400;
     public void setImage1(Image image) {
         jLabel1.setIcon(new ImageIcon(getScaledImage(image, SIZE, SIZE)));
     }
@@ -293,7 +354,11 @@ public class GUIFilter extends javax.swing.JFrame {
     }
 
     public void setImage3(Image image) {
-        jLabel3.setIcon(new ImageIcon(getScaledImage(image, SIZE, SIZE)));
+        setImage(jLabel3, image);
+    }
+    
+    public void setImage(JLabel label, Image image) {
+        label.setIcon(new ImageIcon(getScaledImage(image, SIZE, SIZE)));
     }
     
     /**
@@ -374,12 +439,12 @@ public class GUIFilter extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JSlider jSlider1;
-    private javax.swing.JSlider jSlider2;
-    private javax.swing.JSlider jSlider3;
-    private javax.swing.JSlider jSlider4;
-    private javax.swing.JSlider jSlider5;
-    private javax.swing.JSlider jSlider6;
+    private javax.swing.JSlider jSider22;
+    private javax.swing.JSlider jSlider11;
+    private javax.swing.JSlider jSlider12;
+    private javax.swing.JSlider jSlider21;
+    private javax.swing.JSlider jSlider31;
+    private javax.swing.JSlider jSlider32;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JButton okButton;
     private javax.swing.JMenuItem openMenuItem;
