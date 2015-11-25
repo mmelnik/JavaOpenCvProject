@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
 import java.io.File;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,11 +51,12 @@ public class JavaOpenCvProject {
     private static Mat hierarchy;
 
     public static void main(String[] args) throws Exception {
-
-//        sourceImage = ImageIO.read(new File("d:/Projects/JavaOpenCvProject/src/main/resouces/kotenok-s-klubkom2.jpg"));
-        sourceImage = ImageIO.read(new File("d:/Projects/JavaOpenCvProject/src/main/resouces/car3.jpg"));
-//        sourceImage = ImageIO.read(new File("d:/Projects/JavaOpenCvProject/src/main/resouces/car6.jpg"));
-//        sourceImage = ImageIO.read(new File("d:/Projects/JavaOpenCvProject/src/main/resouces/car7.jpg"));
+        final File file1 = new File("src/main/resources/pics/car3.jpg");
+        final File file2 = new File("src/main/resources/pics/car6.jpg");
+        final File file3 = new File("src/main/resources/pics/car7.jpg");
+        final File file4 = new File("src/main/resources/pics/kotenok-s-klubkom2.jpg");
+        
+        sourceImage = ImageIO.read(file1);
 
         sourceMatrix = convertImageToMat(sourceImage);
 
