@@ -1,10 +1,8 @@
 package com.statistic;
 
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.awt.image.DataBufferByte;
+import java.awt.image.*;
 import java.io.File;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -65,7 +63,6 @@ public class JavaOpenCvProject {
         hMatrix = initializeMatrixForImage(sourceImage);
         sMatrix = initializeMatrixForImage(sourceImage);
         vMatrix = initializeMatrixForImage(sourceImage);
-
 
         destMatrix = initializeMatrixForImage(sourceImage);
 
