@@ -1,4 +1,4 @@
-package com.statistic;
+package com.statistic.gui.old;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
