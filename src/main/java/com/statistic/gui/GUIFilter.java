@@ -30,6 +30,8 @@ public class GUIFilter extends javax.swing.JFrame {
     private Handler handler22;
     private Handler handler31;
     private Handler handler32;
+    private Handler handler41;
+    private Handler handler42;
 
     /**
      * Creates new form NewApplication2
@@ -259,9 +261,19 @@ public class GUIFilter extends javax.swing.JFrame {
 
         jSlider42.setMaximum(255);
         jSlider42.setValue(255);
+        jSlider42.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSlider42StateChanged(evt);
+            }
+        });
 
         jSlider41.setMaximum(255);
         jSlider41.setValue(0);
+        jSlider41.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSlider41StateChanged(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -409,9 +421,11 @@ public class GUIFilter extends javax.swing.JFrame {
         jSlider11.setValue(MIN_0);
         jSlider21.setValue(MIN_0);
         jSlider31.setValue(MIN_0);
+        jSlider41.setValue(MIN_0);
         jSlider12.setValue(MAX_255);
         jSlider22.setValue(MAX_255);
         jSlider32.setValue(MAX_255);
+        jSlider42.setValue(MAX_255);
     }//GEN-LAST:event_resetButtonActionPerformed
 
     private void openMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openMenuItemActionPerformed
@@ -458,6 +472,14 @@ public class GUIFilter extends javax.swing.JFrame {
         this.handler32 = handler32;
     }
     
+    public void setHandler41(Handler handler41) {
+        this.handler41 = handler41;
+    }
+
+    public void setHandler42(Handler handler42) {
+        this.handler42 = handler42;
+    }
+    
     private void jSlider31StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider31StateChanged
         handler31.handle(jSlider31.getValue());
     }//GEN-LAST:event_jSlider31StateChanged
@@ -485,6 +507,14 @@ public class GUIFilter extends javax.swing.JFrame {
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         showBigImage(loadedImage);
     }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void jSlider41StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider41StateChanged
+        handler41.handle(jSlider41.getValue());
+    }//GEN-LAST:event_jSlider41StateChanged
+
+    private void jSlider42StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider42StateChanged
+        handler42.handle(jSlider42.getValue());
+    }//GEN-LAST:event_jSlider42StateChanged
 
     private static final int SIZE = 300;
     

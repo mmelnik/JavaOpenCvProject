@@ -447,12 +447,18 @@
             <Property name="maximum" type="int" value="255"/>
             <Property name="value" type="int" value="255"/>
           </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="jSlider42StateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JSlider" name="jSlider41">
           <Properties>
             <Property name="maximum" type="int" value="255"/>
             <Property name="value" type="int" value="0"/>
           </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="jSlider41StateChanged"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

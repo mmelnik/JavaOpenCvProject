@@ -110,6 +110,19 @@ public class JavaOpenCvProject {
                         handleSlidersValuesChange();
                     }
                 });
+                gui.setHandler41(new Handler() {
+                    public void handle(int newValue) {
+//                        hsvValuesHolder.setvMin(newValue);
+//                        handleSlidersValuesChange();
+                    }
+                });
+
+                gui.setHandler42(new Handler() {
+                    public void handle(int newValue) {
+//                        hsvValuesHolder.setvMax(newValue);
+//                        handleSlidersValuesChange();
+                    }
+                });
             }
         });
         /*
