@@ -65,6 +65,8 @@ public class GUIFilter extends javax.swing.JFrame {
         jSlider31 = new javax.swing.JSlider();
         jPanel4 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
+        jSlider42 = new javax.swing.JSlider();
+        jSlider41 = new javax.swing.JSlider();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         openMenuItem = new javax.swing.JMenuItem();
@@ -247,13 +249,19 @@ public class GUIFilter extends javax.swing.JFrame {
                     .addGap(0, 350, Short.MAX_VALUE)))
         );
 
-        jPanel4.setPreferredSize(new java.awt.Dimension(300, 300));
+        jPanel4.setPreferredSize(new java.awt.Dimension(300, 350));
 
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel4MouseClicked(evt);
             }
         });
+
+        jSlider42.setMaximum(255);
+        jSlider42.setValue(255);
+
+        jSlider41.setMaximum(255);
+        jSlider41.setValue(0);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -262,12 +270,21 @@ public class GUIFilter extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addComponent(jLabel4)
                 .addGap(0, 300, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSlider41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSlider42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(49, 49, 49))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addComponent(jLabel4)
-                .addGap(0, 300, Short.MAX_VALUE))
+                .addGap(0, 298, Short.MAX_VALUE)
+                .addComponent(jSlider41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSlider42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         fileMenu.setMnemonic('f');
@@ -589,6 +606,8 @@ public class GUIFilter extends javax.swing.JFrame {
     private javax.swing.JSlider jSlider22;
     private javax.swing.JSlider jSlider31;
     private javax.swing.JSlider jSlider32;
+    private javax.swing.JSlider jSlider41;
+    private javax.swing.JSlider jSlider42;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JButton okButton;
     private javax.swing.JMenuItem openMenuItem;
