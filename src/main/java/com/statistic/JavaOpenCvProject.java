@@ -55,10 +55,8 @@ public class JavaOpenCvProject {
         final File file4 = new File("src/main/resources/pics/kotenok-s-klubkom2.jpg");
         
         sourceImage = ImageIO.read(file1);
-
         sourceMatrix = convertImageToMat(sourceImage);
 
-        gui = new GUIFilter();
         hsvMatrix = initializeMatrixForImage(sourceImage);
         hMatrix = initializeMatrixForImage(sourceImage);
         sMatrix = initializeMatrixForImage(sourceImage);
@@ -69,12 +67,9 @@ public class JavaOpenCvProject {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
 
+                gui = new GUIFilter();
+                gui.setPreviewImages(sourceImage);
                 gui.setVisible(true);
-
-
-                gui.setImage1(sourceImage);
-                gui.setImage2(sourceImage);
-                gui.setImage3(sourceImage);
 
                 gui.setHandler11(new Handler() {
                     public void handle(int newValue) {
@@ -119,11 +114,7 @@ public class JavaOpenCvProject {
         });
         /*
 
-
-
-
         Core.inRange(hsvMatrix, new Scalar(20, 100, 100), new Scalar(30, 255, 255), destMatrix);
-
 
         Mat contourMat = initializeMatrixForImage(sourceImage);
         destMatrix.copyTo(contourMat);
@@ -176,8 +167,6 @@ public class JavaOpenCvProject {
         Core.inRange(hsvMatrix, new Scalar(hsvValuesHolder.gethMin(), hsvValuesHolder.getsMin(), hsvValuesHolder.getvMin()),
                 new Scalar(hsvValuesHolder.gethMax(), hsvValuesHolder.getsMax(), hsvValuesHolder.getvMax()), destMatrix);
 
-
-
         BufferedImage destGrayScaleImage = convertMatToGrayScaleImage(destMatrix);
         BufferedImage destRgbImage = convertGrayScaleImageToRgb(destGrayScaleImage);
         BufferedImage sourceRgbImage = convertMatToRgbImage(sourceMatrix);
@@ -211,7 +200,8 @@ public class JavaOpenCvProject {
         gui.setImage2(sImage);
         gui.setImage3(vImage);
         gui.setImage4(destRgbImage);
-
+//        gui.setImage5(sourceRgbImage);
+        
         gui.showBigImage(sourceRgbImage);
     }
 

@@ -8,7 +8,6 @@ package com.statistic.gui;
 
 import java.awt.*;
 import java.awt.image.*;
-import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -19,6 +18,18 @@ import javax.swing.*;
  * @author Mykhailo_Melnyk
  */
 public class GUIFilter extends javax.swing.JFrame {
+
+    private static final Integer MAX_255 = Integer.valueOf(255);
+    private static final Integer MIN_0 = Integer.valueOf(0);
+    
+    private Image loadedImage;
+    
+    private Handler handler11;
+    private Handler handler12;
+    private Handler handler21;
+    private Handler handler22;
+    private Handler handler31;
+    private Handler handler32;
 
     /**
      * Creates new form NewApplication2
@@ -343,7 +354,7 @@ public class GUIFilter extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(0, 0, 0)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -374,41 +385,37 @@ public class GUIFilter extends javax.swing.JFrame {
     }//GEN-LAST:event_okButtonActionPerformed
 
     private void resetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetButtonActionPerformed
-        final int min = jSlider11.getMinimum();
-        final int max = jSlider11.getMaximum();
+        resetSliders();
+    }
 
-        jSlider11.setValue(min);
-        jSlider21.setValue(min);
-        jSlider31.setValue(min);
-        jSlider12.setValue(max);
-        jSlider22.setValue(max);
-        jSlider32.setValue(max);
+    private void resetSliders() {
+        jSlider11.setValue(MIN_0);
+        jSlider21.setValue(MIN_0);
+        jSlider31.setValue(MIN_0);
+        jSlider12.setValue(MAX_255);
+        jSlider22.setValue(MAX_255);
+        jSlider32.setValue(MAX_255);
     }//GEN-LAST:event_resetButtonActionPerformed
 
-    private Image loadedImage;
     private void openMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openMenuItemActionPerformed
         int returnVal = jFileChooser1.showOpenDialog(this);
         
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             try {
-                File file = jFileChooser1.getSelectedFile();
-                loadedImage = ImageIO.read(file);
-                setImage1(loadedImage);
-                setImage2(loadedImage);
-                setImage3(loadedImage);
-                setImage4(loadedImage);
+                loadedImage = ImageIO.read(jFileChooser1.getSelectedFile());
+                setPreviewImages(loadedImage);
             } catch (IOException e) {
                 //NOP
             }
         }
     }//GEN-LAST:event_openMenuItemActionPerformed
 
-    private Handler handler11;
-    private Handler handler12;
-    private Handler handler21;
-    private Handler handler22;
-    private Handler handler31;
-    private Handler handler32;
+    public void setPreviewImages(Image loadedImage) {
+        setImage1(loadedImage);
+        setImage2(loadedImage);
+        setImage3(loadedImage);
+        setImage4(loadedImage);
+    }
 
     public void setHandler11(Handler handler11) {
         this.handler11 = handler11;
@@ -478,6 +485,10 @@ public class GUIFilter extends javax.swing.JFrame {
 
     public void setImage4(Image image) {
         setImage(jLabel4, image);
+    }
+
+    public void setImage5(Image image) {
+        setImage(jLabel5, image);
     }
     
     public void setImage(JLabel label, Image image) {
